@@ -1,6 +1,6 @@
 title: "TiRKiO"
 timezone: Europe/Zurich
-url: https://www.tirkio.com
+url: https://tirkio.com
 permalink: "/:title/"
 favicon: 'assets/images/favicon.ico'
 paginate: 30
