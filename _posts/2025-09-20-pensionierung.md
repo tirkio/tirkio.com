@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: "Frühpensionierung & Pensionierung in der Schweiz – Dein Weg zu einem sorgenfreien Ruhestand"
