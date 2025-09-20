@@ -173,5 +173,3 @@ Eine erfolgreiche Frühpensionierung ist kein Zufall, sondern **Planung**:
 - **BVG-Einkäufe / Art. 79b Abs. 3 BVG** – Gesetzestext & PK-Merkblätter  
 - **Kapitalauszahlungssteuer-Rechner** – Kantonale Steuerrechner (Wohnsitzkanton)  
 - **AHV-Beitragspflicht (Nichterwerbstätige)** – Merkblätter der Ausgleichskassen
-
-```
