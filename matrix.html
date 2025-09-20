@@ -38,9 +38,6 @@ exclude: true
       <!-- Rows for Categories -->
       {% for category in all_categories %}
       <div class="p-1">
-        {% if post.categories == nil %}
-          {% assign post.categories = "" %}
-        {% endif %}
         {% if post.categories contains category %}
           <span class="badge bg-primary">✓</span>
         {% else %}

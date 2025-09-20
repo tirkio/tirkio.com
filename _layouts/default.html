@@ -10,7 +10,7 @@
     {%- comment -%} rel=prev/next for paginated lists {%- endcomment -%}
     {% if paginator %}
       {% if paginator.previous_page %}
-        <link rel="prev" href="{% if paginator.previous_page == 1 %}{{ '/' | absolute_url }}{% else %}{{ paginator.previous_page_path | absolute_url }}{% endif %}">
+        <link rel="prev" href="{% if paginator.previous_page == 1 %}{{ '/' | relative_url | absolute_url }}{% else %}{{ paginator.previous_page_path | absolute_url }}{% endif %}">
       {% endif %}
       {% if paginator.next_page %}
         <link rel="next" href="{{ paginator.next_page_path | absolute_url }}">
@@ -27,17 +27,21 @@
     {%- comment -%} Breadcrumbs for posts (JSON-LD) {%- endcomment -%}
     {% if page.layout == 'post' %}
       {% assign primary_cat = page.categories | first %}
+      {% assign primary_cat_slug = primary_cat | slugify %}
       <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ '/' | absolute_url }}" }{% if primary_cat %},
-          { "@type": "ListItem", "position": 2, "name": "{{ primary_cat }}", "item": "{{ '/categories#' | append: primary_cat | slugify | absolute_url }}" }{% endif %},
+          { "@type": "ListItem", "position": 2, "name": "{{ primary_cat }}", "item": "{{ ('/categories#' | append: primary_cat_slug) | absolute_url }}" }{% endif %},
           { "@type": "ListItem", "position": 3, "name": "{{ page.title }}", "item": "{{ page.url | absolute_url }}" }
         ]
       }
       </script>
+    {% endif %}
+    {% if page.robots %}
+      <meta name="robots" content="{{ page.robots }}">
     {% endif %}
 
     <meta
@@ -49,9 +53,9 @@
       href="{{ '/assets/css/bootstrap.min.css' | relative_url }}"
     />
     <link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon//favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon//favicon-32x32.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon//favicon-180x180.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/favicon-180x180.png">
     <link rel="manifest" href="/manifest.json">
   </head>
 
@@ -80,20 +84,23 @@
         <!-- Navigation Menu -->
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ms-auto">
-            {% assign displayed_categories = "" %} {% for category in
-            site.categories %} {% assign top_level_category = category[0] |
-            split: '/' | first %} {% if displayed_categories contains
-            top_level_category %} {% continue %} {% else %}
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="{{ site.baseurl }}/categories#{{ top_level_category | slugify }}"
-              >
-                {{ top_level_category | capitalize }}
-              </a>
-            </li>
-            {% assign displayed_categories = displayed_categories | append:
-            top_level_category %} {% endif %} {% endfor %}
+            {% assign displayed_categories = "" %}
+            {% for category in site.categories %}
+              {% assign top_level_category = category[0] | split: '/' | first %}
+              {% if displayed_categories contains top_level_category %}
+                {% continue %}
+              {% else %}
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="{{ site.baseurl }}/categories#{{ top_level_category | slugify }}"
+                  >
+                    {{ top_level_category | capitalize }}
+                  </a>
+                </li>
+                {% assign displayed_categories = displayed_categories | append: top_level_category %}
+              {% endif %}
+            {% endfor %}
           </ul>
         </div>
       </div>
@@ -106,17 +113,18 @@
     <footer class="my-3">
       <div class="container text-center">
         <ul class="list-inline">
-          {% for page in site.pages %} {% if page.title and page.permalink and
-          page.exclude != true %}
-          <li class="list-inline-item">
-            <a
-              href="{{ site.baseurl }}{{ page.permalink }}"
-              class="text-decoration-none"
-            >
-              {{ page.title }}
-            </a>
-          </li>
-          {% endif %} {% endfor %}
+          {% for page in site.pages %}
+            {% if page.title and page.permalink and page.exclude != true %}
+              <li class="list-inline-item">
+                <a
+                  href="{{ site.baseurl }}{{ page.permalink }}"
+                  class="text-decoration-none"
+                >
+                  {{ page.title }}
+                </a>
+              </li>
+            {% endif %}
+          {% endfor %}
         </ul>
       </div>
     </footer>
