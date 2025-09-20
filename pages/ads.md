@@ -2,6 +2,7 @@
 layout: page
 title: Werbung
 permalink: "/ads/"
+robots: noindex,follow
 ---
 
 TiRKiO steht für digitales Neobanking rund ums Zahlen, Sparen, Anlegen und Vorsorgen – perfekt für den frugalen Lifestyle. Diese Plattform bietet eine moderne Informationsquelle für Gen Z und Frugalisten jeden Alters.

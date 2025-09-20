@@ -1,20 +1,41 @@
 <section class="container">
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-        var disqus_shortname = '{{ site.disqus }}'; 
-        var disqus_developer = 0;
-        (function() {
-            var dsq = document.createElement('script'); 
-            dsq.type = 'text/javascript'; 
-            dsq.async = true;
-            dsq.src = window.location.protocol + '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-    <noscript>
-        <p class="text-center text-muted">
-            Please enable JavaScript to view the 
-            <a href="http://disqus.com/?ref_noscript" class="text-decoration-none">comments powered by Disqus.</a>
-        </p>
-    </noscript>
+  <div id="disqus_holder">
+    <button id="load_comments" class="btn btn-light btn-sm">Kommentare laden</button>
+  </div>
+  <div id="disqus_thread" class="mt-3" hidden></div>
+
+  <script>
+    (function() {
+      var loaded = false;
+      function loadDisqus() {
+        if (loaded) return;
+        loaded = true;
+        document.getElementById('disqus_thread').hidden = false;
+        var d = document, s = d.createElement('script');
+        s.src = (location.protocol === 'https:' ? 'https://' : 'http://') + '{{ site.disqus }}' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        s.async = true;
+        (d.head || d.body).appendChild(s);
+      }
+      // Load on click
+      var btn = document.getElementById('load_comments');
+      if (btn) btn.addEventListener('click', loadDisqus);
+
+      // Also load on scroll into view (progressive enhancement)
+      var holder = document.getElementById('disqus_holder');
+      if ('IntersectionObserver' in window && holder) {
+        var io = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry){ if (entry.isIntersecting) { loadDisqus(); io.disconnect(); }});
+        }, { rootMargin: '1200px' });
+        io.observe(holder);
+      }
+    })();
+  </script>
+
+  <noscript>
+    <p class="text-center text-muted">
+      Bitte JavaScript aktivieren, um die
+      <a href="https://disqus.com/?ref_noscript" class="text-decoration-none" rel="nofollow noopener">Kommentare von Disqus</a> zu sehen.
+    </p>
+  </noscript>
 </section>

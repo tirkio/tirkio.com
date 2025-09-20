@@ -6,7 +6,9 @@
       <img
         class="card-img-top img-fluid rounded"
         src="{{ site.baseurl }}/{{ post.image }}"
-        alt="{{ post.title }}"
+        alt="{{ post.title | escape }}"
+        loading="lazy"
+        decoding="async"
       />
       <figcaption class="position-absolute top-0 end-0 p-1 text-body-tertiary rounded">
         <small>Bild:{{ post.source }}</small>

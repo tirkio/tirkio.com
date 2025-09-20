@@ -27,7 +27,10 @@ exclude: true
         <img
           class="img-fluid"
           src="{{ site.baseurl }}/{{ page.image }}"
-          alt="{{ page.title }}"
+          alt="{{ page.title | escape }}"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
         />
         <figcaption class="position-absolute top-0 end-0 p-1 text-body-tertiary rounded">
           <small>Bild:{{ page.source }}</small>

@@ -10,14 +10,17 @@ layout: default
       {% if page.image %}
       <figure class="position-relative">
         <img
-        class="img-fluid w-100 rounded"
-        src="{{ site.baseurl }}/{{ page.image }}"
-        alt="{{ page.title }}"
-        style="object-fit: cover"
-      />
+          class="img-fluid w-100 rounded"
+          src="{{ site.baseurl }}/{{ page.image }}"
+          alt="{{ page.title | escape }}"
+          loading="lazy"
+          decoding="async"
+          style="object-fit: cover"
+        />
         <figcaption class="position-absolute top-0 end-0 p-1 text-body-tertiary rounded">
           <small>Bild:{{ page.source }}</small>
         </figcaption>
+      </figure>
       {% endif %}
 
       <!-- Post Categories -->

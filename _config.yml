@@ -1,9 +1,11 @@
 title: "TiRKiO"
 timezone: Europe/Zurich
 url: https://tirkio.com
+baseurl: ""
 permalink: "/:title/"
 favicon: 'assets/images/favicon.ico'
 paginate: 30
+paginate_path: "/page:num/"
 disqus: 'tirkio'
 locale: de
 lang: de
@@ -19,3 +21,14 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-seo-tag
+  - jekyll-last-modified-at
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      lang: de
+      locale: de_CH
+      sitemap: true
+      seo:
+        type: "Article"
