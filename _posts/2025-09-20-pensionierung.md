@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Frühpensionierung & Pensionierung in der Schweiz – Dein Weg zu einem sorgenfreien Ruhestand"
+title: "Pensionierung in der Schweiz – Dein Weg zu einem sorgenfreien Ruhestand"
 date: 2025-09-20
 categories: [ Vorsorgen ]
 tags: [ AHV, BVG, Säule 3a, Pensionierung, Vorsorge ]
