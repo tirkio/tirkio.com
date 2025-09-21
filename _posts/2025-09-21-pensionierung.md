@@ -1,12 +1,12 @@
----
-layout: post
-title: "Der Weg zu einem sorgenfreien Ruhestand"
-date: 2025-09-20
-categories: \[ Vorsorge ]
-tags: \[ AHV, BVG, Säule 3a, Pensionierung, Vorsorge ]
+--- 
+layout: post 
+title: "Der Weg zum sorgenfreien Ruhestand"
+date: 2025-09-20 
+categories: [ Vorsorge ] 
+tags: [ AHV, BVG, Säule 3a, Pensionierung, Vorsorge ] 
 image: assets/images/pensionierung.webp
-matrix: false
--------------
+matrix: false 
+---
 
 > **Kurz & bündig:** Ein gut geplanter Ruhestand bedeutet Freiheit, Flexibilität und finanzielle Sicherheit. In der Schweiz stützt er sich auf das 3‑Säulen‑System: **AHV (1. Säule)**, **BVG/Pensionskasse (2. Säule)** und **Säule 3a**. Mit kluger Planung lässt sich eine **Frühpensionierung ab 58/60** realisieren und die Zeit bis zum AHV‑Bezug nahtlos überbrücken.
 
