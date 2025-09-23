@@ -8,15 +8,9 @@ source: pixabay.com
 matrix: false
 ---
 
-# Rückstellungsplanung – Fixkosten clever managen
+Fixkosten fallen ohnehin an. Wer sie gedanklich **und** finanziell über das Jahr verteilt, bezahlt Rechnungen stressfrei, nutzt Jahreszahler-Vorteile und behält stets den Blick auf frei verfügbares Vermögen – unabhängig vom Einkommen.
 
-> **Kernaussage:** Fixkosten fallen ohnehin an. Wer sie gedanklich **und** finanziell über das Jahr verteilt, bezahlt Rechnungen stressfrei, nutzt Jahreszahler-Vorteile und behält stets den Blick auf frei verfügbares Vermögen – unabhängig vom Einkommen.
-
----
-
-## Was Rückstellungsplanung ist
-
-Rückstellungsplanung ist eine einfache **Priorisierungs-Methode**: Alle verpflichtenden, wiederkehrenden Ausgaben werden frühzeitig als „reserviert“ behandelt – Monat für Monat. Große Einzelbeträge schrumpfen zu planbaren Monatsanteilen. Das schafft Ruhe, Transparenz und Kontrolle über das **frei verfügbare** Geld für Konsum und – wenn möglich – Vermögensaufbau.
+Die Rückstellungsplanung ist eine einfache **Priorisierungs-Methode**: Alle verpflichtenden, wiederkehrenden Ausgaben werden frühzeitig als „reserviert“ behandelt – Monat für Monat. Große Einzelbeträge schrumpfen zu planbaren Monatsanteilen. Das schafft Ruhe, Transparenz und Kontrolle über das **frei verfügbare** Geld für Konsum und – wenn möglich – Vermögensaufbau.
 
 **Wichtig:** Die Methode funktioniert **einkommensunabhängig**. Ob Azubi-Gehalt, schwankende Selbstständigen-Einnahmen oder hohes Salär – Fixkosten bleiben Fixkosten. Rückstellungsplanung ordnet sie zuerst, damit alles andere bewusst danach ausgerichtet werden kann.
 
