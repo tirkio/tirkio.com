@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Stammwährung: Währungsrisiken verstehen und steuern"
+title: "Stammwährung: Währungsrisiken steuern"
 categories: [ Investieren, Trading, Anlegen ]
 tags: [ Aktien, ETFs, Optionen, Anleihen, Fonds, Forex, CFDs, GBP, EUR, USD, AUD, CAD, CHF, JPY, HKD, SGD, SEK, NOK ]
 image: assets/images/stammwaehrung.webp
