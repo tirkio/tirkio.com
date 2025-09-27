@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Interactive Brokers UK"
-categories: [ Investieren, Trading, Finanzen ]
+categories: [ Investieren, Trading, Anlegen ]
 tags: [ Aktien, ETFs, Optionen, Anleihen, Fonds, Forex, CFDs, GBP, EUR, USD, AUD, CAD, CHF, JPY, HKD, SGD, SEK, NOK ]
 image: assets/images/ib.webp
 source: ibkr.com
