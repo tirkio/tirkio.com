@@ -1,7 +1,6 @@
 --- 
 layout: post 
 title: "Der Weg zum sorgenfreien Ruhestand"
-date: 2025-09-21 
 categories: [ Vorsorge ] 
 tags: [ AHV, BVG, Säule 3a, Pensionierung, Vorsorge ] 
 image: assets/images/pensionierung.webp
