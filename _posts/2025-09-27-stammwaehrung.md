@@ -3,7 +3,7 @@ layout: post
 title: "Stammwährung: Währungsrisiken verstehen und steuern"
 categories: [ Investieren, Trading, Anlegen ]
 tags: [ Aktien, ETFs, Optionen, Anleihen, Fonds, Forex, CFDs, GBP, EUR, USD, AUD, CAD, CHF, JPY, HKD, SGD, SEK, NOK ]
-image: assets/images/sparen.webp
+image: assets/images/stammwaehrung.webp
 source: pixabay.com
 matrix: false
 ---
@@ -162,7 +162,6 @@ Im September 2025 zeigte eine Schweizer Robo-Advisor-Plattform ein Beispiel daf�
 
 * Gold und USD-lastige Aktien-ETFs wurden im Reporting **unter „Andere Währungen“** ausgewiesen – statt klar als **USD-Exposure**.
 * Kunden erhielten die Aussage, Gold müsse nicht gehedged werden, da es „global intrinsisch“ sei.
-* Auf Nachfrage gab es **keine klare Roadmap**, ob und wann gehedgte Produkte angeboten werden.
 
 **Folgen für Anleger:**
 
@@ -174,7 +173,6 @@ Im September 2025 zeigte eine Schweizer Robo-Advisor-Plattform ein Beispiel daf�
 >
 > * Immer klar ausweisen, wie hoch der USD-Anteil ist.
 > * Hedge-Optionen transparent darstellen.
-> * Entscheidungen mit Begründung und Zeithorizont kommunizieren.
 
 ---
 
@@ -220,6 +218,7 @@ Im September 2025 zeigte eine Schweizer Robo-Advisor-Plattform ein Beispiel daf�
 | „Ungehedged = bessere Diversifikation.“   | Teilweise richtig, aber bringt höhere CHF-Schwankungen.                                |
 | „USD-Obligationen sind attraktiver.“      | Ohne Hedge wird das FX-Risiko in den Stabilisator importiert – Zielverfehlung möglich. |
 | „USD-Performance reicht zur Beurteilung.“ | Nein. Relevant ist die CHF-Rendite.                                                    |
+| „Gold hat kein Währungsrisiko.“           | Nein. Relevant ist, in welcher Währung das Instrument kotiert ist.                     |
 
 ---
 
