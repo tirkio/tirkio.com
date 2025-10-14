@@ -29,4 +29,4 @@ Interactive Brokers UK ermöglicht es, wie ein globaler Investor zu agieren. Mit
 Im Vergleich zu traditionellen Brokern bietet Interactive Brokers UK eine unschlagbare Kombination aus niedrigen Kosten, globalem Marktzugang und fortschrittlichen Handelstools. Keine versteckten Gebühren, keine intransparenten Spreads, keine umständlichen Prozesse. Ob du in US-Aktien investierst, europäische ETFs kaufst oder Forex handelst – Interactive Brokers UK macht es effizient, präzise und kostengünstig. Die Zinsen auf Guthaben und die leistungsstarke Plattform heben das Angebot auf ein neues Niveau, besonders für renditebewusste und global denkende Anleger.
 
 ## Jetzt starten
-Profitiere vom [Empfehlungsangebot](https://tinyurl.com/3t7857zc) und tauche ein in die Welt des globalen Investierens! 
+Profitiere vom [Empfehlungsangebot](https://ibkr.com/referral/flavio791) und tauche ein in die Welt des globalen Investierens! 
