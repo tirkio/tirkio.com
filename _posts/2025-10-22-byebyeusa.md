@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Bye-bye USA – Das demokratische Portfolio"
+title: "Bye-bye USA"
 categories: [ Anlegen ]
 tags: [ Aktien, ETF, CHF ]
 image: assets/images/byebyeusa.webp
