@@ -28,7 +28,7 @@ Währungen sind **Tausch- und Wertaufbewahrungsmittel**, deren langfristige Entw
 
 * **Keine** US-Aktien, -Anleihen, -ETFs, -Geldmarktprodukte.
 * Fokus auf **UK, Europa, Kanada, Japan, Asien/APAC, Australien/Neuseeland** sowie **EM ex-US**—jeweils über **CHF-gehedgte** Vehikel.
-* **Rohstoffe/Gold** nur über **CHF-gehedgte** Lösungen (oder physisch mit CHF-Preisbezug).
+* **Rohstoffe/Gold** nur über **CHF-gehedgte** Lösungen.
 * **Obligationen:** primär **CHF-Bonds** (Staat/IG-Unternehmen). Ergänzend **EUR/JPY/CAD**—**stets CHF-gehedgt**.
 * **Liquidität** in **CHF-Cash/Geldmarkt** halten.
 
