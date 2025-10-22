@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Bye-Bye USA"
+title: "Byebye USA"
 categories: [ Anlegen ]
 tags: [ Aktien, ETF, CHF ]
 image: assets/images/byebyeusa.webp
