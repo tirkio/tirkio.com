@@ -49,6 +49,8 @@ exclude: true
 <!-- Posts List with Sidebar -->
 <section class="container my-3">
   <div class="row">
+    <!-- Sidebar -->
+    <div class="col-lg-4">{% include sidebar.html %}</div>
     <!-- Main Content -->
     <div class="col-lg-8">
       <div class="row">
@@ -59,7 +61,5 @@ exclude: true
       <!-- Pagination -->
       {% include pagination.html %}
     </div>
-    <!-- Sidebar -->
-    <div class="col-lg-4">{% include sidebar.html %}</div>
   </div>
 </section>
