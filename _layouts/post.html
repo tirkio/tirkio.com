@@ -82,6 +82,47 @@ layout: default
       <!-- Post Content -->
       <div class="article-post serif-font">{{ content }}</div>
 
+      {% if page.app_store_url or page.google_play_url %}
+      <div class="d-flex flex-wrap align-items-center gap-2 my-4">
+        {% if page.app_store_url %}
+        <a
+          class="d-inline-flex align-items-center"
+          href="{{ page.app_store_url }}"
+          target="_blank"
+          rel="noreferrer noopener"
+          aria-label="Im App Store herunterladen"
+        >
+          <img
+            class="store-badge"
+            src="{{ '/assets/images/badges/app-store-badge.svg' | relative_url }}"
+            alt="Im App Store herunterladen"
+            height="50"
+            loading="lazy"
+            decoding="async"
+          />
+        </a>
+        {% endif %}
+        {% if page.google_play_url %}
+        <a
+          class="d-inline-flex align-items-center"
+          href="{{ page.google_play_url }}"
+          target="_blank"
+          rel="noreferrer noopener"
+          aria-label="Bei Google Play herunterladen"
+        >
+          <img
+            class="store-badge"
+            src="{{ '/assets/images/badges/google-play-badge.svg' | relative_url }}"
+            alt="Bei Google Play herunterladen"
+            height="50"
+            loading="lazy"
+            decoding="async"
+          />
+        </a>
+        {% endif %}
+      </div>
+      {% endif %}
+
       <!-- Post Date -->
       <p class="text-muted">
         <small>
