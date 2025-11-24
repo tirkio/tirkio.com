@@ -7,8 +7,8 @@ favicon: 'assets/images/favicon.ico'
 paginate: 30
 paginate_path: "/page:num/"
 disqus: 'tirkio'
-locale: de
-lang: de
+locale: de_CH
+lang: de-CH
 feed_items: 10
 feed_update_period: daily
 feed_update_frequency: 1
