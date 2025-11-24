@@ -6,6 +6,8 @@ tags: [ Aktien, ETFs, Optionen, Anleihen, Fonds, Forex, CFDs, GBP, EUR, USD, AUD
 image: assets/images/ib.webp
 source: ibkr.com
 matrix: true
+app_store_url: https://apps.apple.com/us/app/ibkr-mobile-invest-worldwide/id454558592
+google_play_url: https://play.google.com/store/apps/details?id=com.interactivebrokers.mobileclient
 ---
 
 Interactive Brokers UK bietet eine der kostengünstigsten Plattformen für den Handel mit Aktien, ETFs, Optionen, Anleihen, Fonds, Forex und CFDs. Die Gebührenstruktur ist transparent, ohne versteckte Kosten, und oft bis zu 80 % günstiger als bei traditionellen Brokern. Kunden sehen vorab exakt, welche Kosten anfallen – volle Kontrolle, keine Überraschungen.
