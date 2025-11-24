@@ -1,8 +1,20 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de-CH">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     {% seo %}
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "TiRKiO",
+      "url": "https://tirkio.com/",
+      "logo": "{{ '/assets/favicon/favicon-180x180.png' | absolute_url }}",
+      "sameAs": [],
+      "areaServed": "CH"
+    }
+    </script>
 
     {%- comment -%} RSS/Atom feed hint {%- endcomment -%}
     <link rel="alternate" type="application/atom+xml" href="{{ '/feed.xml' | absolute_url }}" title="{{ site.title }}">
