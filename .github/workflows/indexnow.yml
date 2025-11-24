@@ -1,0 +1,115 @@
+name: Notify IndexNow on content updates
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Collect updated URLs
+        id: collect
+        run: |
+          SITE="https://tirkio.com"
+          urls=("$SITE/" "$SITE/sitemap.xml")
+
+          if git rev-parse HEAD^ >/dev/null 2>&1; then
+            mapfile -t changed < <(git diff --name-only HEAD^ HEAD)
+          else
+            mapfile -t changed < <(git diff --name-only HEAD)
+          fi
+
+          for file in "${changed[@]}"; do
+            case "$file" in
+              _posts/*)
+                slug=$(basename "$file" | sed -E 's/^[0-9]{4}-[0-9]{2}-[0-9]{2}-//; s/\.[^.]+$//')
+                urls+=("$SITE/$slug/")
+                ;;
+              pages/*.md|pages/*.html)
+                slug=$(basename "$file")
+                slug="${slug%.*}"
+                if [ "$slug" = "index" ]; then
+                  urls+=("$SITE/")
+                else
+                  urls+=("$SITE/$slug/")
+                fi
+                ;;
+              index.html)
+                urls+=("$SITE/")
+                ;;
+              categories.html)
+                urls+=("$SITE/categories/")
+                ;;
+              tags.html)
+                urls+=("$SITE/tags/")
+                ;;
+              matrix.html)
+                urls+=("$SITE/matrix/")
+                ;;
+            esac
+          done
+
+          unique_urls=$(printf '%s\n' "${urls[@]}" | sed '/^$/d' | sort -u | tr '\n' ',' | sed 's/,$//')
+          echo "urls=${unique_urls}" >> "$GITHUB_OUTPUT"
+
+      - name: Submit URLs to IndexNow
+        if: steps.collect.outputs.urls != ''
+        env:
+          INDEXNOW_URLS: ${{ steps.collect.outputs.urls }}
+        run: |
+          set -euo pipefail
+
+          HOST="tirkio.com"
+          KEY_FILE="9ec41ad1867b4fef9b81dbf85726ccd4.txt"
+
+          if [ ! -f "$KEY_FILE" ]; then
+            echo "IndexNow key file missing: $KEY_FILE" >&2
+            exit 1
+          fi
+
+          KEY=$(cat "$KEY_FILE" | tr -d '\n\r')
+          export INDEXNOW_URLS KEY HOST
+
+          payload=$(python - <<'PY'
+import json, os, sys
+
+urls = [u.strip() for u in os.environ["INDEXNOW_URLS"].split(',') if u.strip()]
+if not urls:
+    sys.exit("No URLs to submit.")
+
+key = os.environ["KEY"].strip()
+host = os.environ["HOST"].strip()
+
+payload = {
+    "host": host,
+    "key": key,
+    "keyLocation": f"https://{host}/{key}.txt",
+    "urlList": urls,
+}
+
+print(json.dumps(payload))
+PY
+)
+
+          echo "Submitting to IndexNow with payload:" >&2
+          echo "$payload" >&2
+
+          response=$(printf '%s' "$payload" | curl -sS -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d @- -w '\nHTTP_STATUS:%{http_code}\n')
+
+          echo "$response"
+
+          status=$(echo "$response" | sed -n 's/^HTTP_STATUS:\([0-9]*\)$/\1/p')
+
+          if [ -z "$status" ] || [ "$status" -ge 300 ]; then
+            echo "IndexNow submission failed with status ${status:-unknown}." >&2
+            exit 1
+          fi
