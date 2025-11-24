@@ -86,12 +86,15 @@ layout: default
       <div class="d-flex flex-wrap align-items-center gap-2 my-4">
         {% if page.app_store_url %}
         <a
+          class="d-inline-flex align-items-center"
           href="{{ page.app_store_url }}"
           target="_blank"
           rel="noreferrer noopener"
+          aria-label="Im App Store herunterladen"
         >
           <img
-            src="https://tools.apple.com/badges/download-on-the-app-store/black/de-de.svg"
+            class="store-badge"
+            src="{{ '/assets/images/badges/app-store-badge.svg' | relative_url }}"
             alt="Im App Store herunterladen"
             height="50"
             loading="lazy"
@@ -101,12 +104,15 @@ layout: default
         {% endif %}
         {% if page.google_play_url %}
         <a
+          class="d-inline-flex align-items-center"
           href="{{ page.google_play_url }}"
           target="_blank"
           rel="noreferrer noopener"
+          aria-label="Bei Google Play herunterladen"
         >
           <img
-            src="https://play.google.com/intl/en_us/badges/static/images/badges/de_badge_web_generic.png"
+            class="store-badge"
+            src="{{ '/assets/images/badges/google-play-badge.svg' | relative_url }}"
             alt="Bei Google Play herunterladen"
             height="50"
             loading="lazy"
