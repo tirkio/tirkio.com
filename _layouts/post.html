@@ -2,6 +2,36 @@
 layout: default
 ---
 
+{% assign article_description = page.description | default: page.excerpt | strip_html | strip_newlines | truncate: 160 %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": "{{ page.url | absolute_url }}",
+  "headline": "{{ page.title | escape }}",
+  "description": "{{ article_description | escape }}",
+  {% if page.image %}
+  "image": "{{ page.image | absolute_url }}",
+  {% endif %}
+  "author": {
+    "@type": "Person",
+    "name": "TiRKiO"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "TiRKiO",
+    "url": "{{ '/' | absolute_url }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ '/assets/favicon/favicon-180x180.png' | absolute_url }}"
+    },
+    "areaServed": "CH"
+  },
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}"
+}
+</script>
+
 <div class="container my-3">
   <div class="row">
     <!-- Post Content -->
